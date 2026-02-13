@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذكرى الحاج علي والحاجة يسرى الزغول - رحمهما الله</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- إعدادات عامة وتنسيق --- */
+        :root {
+            --primary-green: #1e3e2a;
+            --gold: #d4af37;
+            --light-bg: rgba(244, 254, 240, 0.95);
+        }
+        
+        body {
+            margin: 0; font-family: 'Tajawal', sans-serif; color: #f0f0f0; line-height: 1.7; position: relative; min-height: 100vh;
+            background: url('https://images.unsplash.com/photo-1540206395-68808572332f?auto=format&fit=crop&w=1740&q=80') fixed center/cover;
+        }
+        body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 30, 0, 0.6); z-index: -1; }
+
+        .main-container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+        /* --- الهيدر --- */
+        .header-spiritual {
+            text-align: center; padding: 50px 20px; background: linear-gradient(145deg, rgba(58, 79, 56, 0.9), rgba(30, 46, 29, 0.9));
+            border-radius: 20px; margin-bottom: 30px; border: 1px solid var(--gold);
+        }
+        .header-text h1 { font-family: 'Amiri', serif; font-size: 2.2rem; color: #f3e5c1; margin: 10px 0; }
+        .dua { font-size: 1.3rem; color: #f3e5c1; background: rgba(212, 175, 55, 0.15); padding: 8px 25px; border-radius: 50px; border: 1px solid var(--gold); display: inline-block; }
+
+        .content-grid { display: grid; grid-template-columns: 1fr 350px; gap: 25px; }
+        .card-section { background: var(--light-bg); color: #1c3b27; padding: 25px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); margin-bottom: 25px; }
+        .section-title { font-family: 'Amiri', serif; font-size: 1.8rem; color: #25633b; border-bottom: 2px solid var(--gold); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+
+        /* الأذكار */
+        .azkar-container { display: flex; flex-direction: column; gap: 15px; }
+        .zekr-box { background: white; padding: 15px; border-radius: 12px; border-right: 5px solid var(--gold); cursor: pointer; transition: 0.3s; position: relative; }
+        .zekr-box:hover { background: #f0f7f0; transform: translateY(-2px); }
+        .zekr-count-badge { position: absolute; left: 15px; top: 15px; background: var(--primary-green); color: white; padding: 2px 12px; border-radius: 10px; font-size: 0.9rem; }
+
+        /* الأدعية */
+        .dua-list { list-style: none; padding: 0; }
+        .dua-item {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            position: relative;
+            border-right: 5px solid var(--gold);
+            font-family: 'Amiri', serif;
+            font-size: 1.1rem;
+            line-height: 2;
+        }
+        .copy-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .copy-btn:hover { background: #2a6e43; }
+
+        /* القرآن */
+        .reciter-box { margin-bottom: 15px; }
+        .reciter-select { width: 100%; padding: 10px; border-radius: 10px; border: 1px solid var(--gold); font-family: 'Tajawal'; font-weight: bold; }
+        .sura-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 10px; margin-bottom: 20px; }
+        .sura-btn { background: #e8f5e9; border: 1px solid #2a6e43; padding: 10px; border-radius: 10px; cursor: pointer; font-weight: bold; transition: all 0.3s; }
+        .sura-btn:hover { background: #d0e9d4; }
+        .sura-btn.active { background: var(--primary-green); color: white; }
+
+        /* --- أوقات الصلاة --- */
+        .prayer-list { list-style: none; padding: 0; }
+        .prayer-item { display: flex; justify-content: space-between; padding: 10px 15px; background: white; margin-bottom: 8px; border-radius: 8px; font-weight: bold; border-right: 4px solid var(--gold); }
+
+        /* مسبحة */
+        .tasbih-val { font-size: 3rem; text-align: center; color: var(--gold); font-family: 'Amiri', serif; display: block; margin: 10px 0; }
+
+        @media (max-width: 900px) { .content-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <header class="header-spiritual">
+        <div class="header-text">
+            <h1>الحاج علي إبراهيم الزغول والحاجة يسرى عقيل الزغول</h1>
+            <div class="dua">رحمهما الله وجعل مثواهما الجنة</div>
+        </div>
+    </header>
+
+    <div class="content-grid">
+        <main>
+            <section class="card-section">
+                <h3 class="section-title"><i class="fas fa-heart"></i> أذكار مختارة (اضغط للتسبيح)</h3>
+                <div class="azkar-container">
+                    <div class="zekr-box" onclick="countZekr(this, 33)">
+                        <span class="zekr-count-badge">0 / 33</span>
+                        <p>سُبْحَانَ اللهِ وَبِحَمْدِهِ</p>
+                    </div>
+                    <div class="zekr-box" onclick="countZekr(this, 100)">
+                        <span class="zekr-count-badge">0 / 100</span>
+                        <p>أستغفر الله وأتوب إليه</p>
+                    </div>
+                    <div class="zekr-box" onclick="countZekr(this, 10)">
+                        <span class="zekr-count-badge">0 / 10</span>
+                        <p>اللهم صلِّ وسلم على نبينا محمد</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card-section">
+                <h3 class="section-title"><i class="fas fa-hands-praying"></i> أدعية للمتوفين</h3>
+                <ul class="dua-list">
+                    <li class="dua-item">
+                        <p>اللَّهُمَّ اغْفِرْ لَهُ وَارْحَمْهُ، وَعَافِهِ وَاعْفُ عَنْهُ، وَأَكْرِمْ نُزُلَهُ، وَوَسِّعْ مُدْخَلَهُ، وَاغْسِلْهُ بِالْمَاءِ وَالثَّلْجِ وَالْبَرَدِ، وَنَقِّهِ مِنَ الْخَطَايَا كَمَا يُنَقَّى الثَّوْبُ الْأَبْيَضُ مِنَ الدَّنَسِ، وَأَبْدِلْهُ دَارًا خَيْرًا مِنْ دَارِهِ، وَأَهْلًا خَيْرًا مِنْ أَهْلِهِ، وَزَوْجًا خَيْرًا مِنْ زَوْجِهِ، وَقِهِ فِتْنَةَ الْقَبْرِ وَعَذَابَ النَّارِ.</p>
+                        <button class="copy-btn" onclick="copyText(this)">نسخ</button>
+                    </li>
+                    <li class="dua-item">
+                        <p>اللَّهُمَّ أَلْبِسْهُ عَطَاءَكَ، وَأَلْبِسْهُ رَحْمَتَكَ، وَأَلْبِسْهُ عَفْوَكَ، وَأَلْبِسْهُ كَرَامَتَكَ، وَأَدْخِلْهُ جَنَّتَكَ.</p>
+                        <button class="copy-btn" onclick="copyText(this)">نسخ</button>
+                    </li>
+                    <li class="dua-item">
+                        <p>اللَّهُمَّ اجْعَلْ قَبْرَهُ رَوْضَةً مِنْ رِيَاضِ الْجَنَّةِ، وَلَا تَجْعَلْهُ حُفْرَةً مِنْ حُفَرِ النَّارِ.</p>
+                        <button class="copy-btn" onclick="copyText(this)">نسخ</button>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="card-section">
+                <h3 class="section-title"><i class="fas fa-quran"></i> القرآن الكريم</h3>
+                
+                <div class="reciter-box">
+                    <label>اختر القارئ:</label>
+                    <select id="reciterSelect" class="reciter-select" onchange="changeReciter()">
+                        <option value="https://server12.mp3quran.net/maher/">ماهر المعيقلي</option>
+                        <option value="https://server7.mp3quran.net/basit/">عبد الباسط عبد الصمد</option>
+                        <option value="https://server8.mp3quran.net/afs/">مشاري راشد العفاسي</option>
+                    </select>
+                </div>
+
+                <div class="sura-list" id="suraList"></div>
+                
+                <div style="background: white; padding: 15px; border-radius: 12px;">
+                    <strong id="trackTitle">سورة الفاتحة</strong>
+                    <audio id="mainAudio" controls autoplay src="https://server12.mp3quran.net/maher/001.mp3"></audio>
+                </div>
+            </section>
+        </main>
+
+        <aside>
+            <div class="card-section">
+                <h3 class="section-title"><i class="fas fa-clock"></i> مواقيت الصلاة (عمان)</h3>
+                <div id="prayerLoading">جاري التحديث...</div>
+                <ul class="prayer-list" id="prayerTimes"></ul>
+            </div>
+
+            <div class="card-section" style="text-align: center;">
+                <h3 class="section-title"><i class="fas fa-beads"></i> المسبحة الإلكترونية</h3>
+                <span class="tasbih-val" id="tasbihNet">0</span>
+                <button onclick="updateTasbih()" style="width:100%; padding:15px; background:var(--primary-green); color:white; border:none; border-radius:10px; cursor:pointer; font-size:1.2rem;">تسبيح</button>
+                <button onclick="resetTasbih()" style="margin-top:10px; background:none; border:none; color:#888; cursor:pointer;">إعادة ضبط</button>
+            </div>
+        </aside>
+    </div>
+
+    <footer style="text-align: center; padding: 40px; color: #f3e5c1;">
+        <p>صدقة جارية لروح الحاج علي والحاجة يسرى الزغول - نسألكم الدعاء</p>
+    </footer>
+</div>
+
+<script>
+    // 1. تشغيل القرآن
+    const surahs = [
+        {id: '001', name: 'الفاتحة'}, {id: '018', name: 'الكهف'}, {id: '036', name: 'يس'}, 
+        {id: '055', name: 'الرحمن'}, {id: '067', name: 'الملك'}, {id: '112', name: 'الإخلاص'}
+    ];
+    
+    const audio = document.getElementById('mainAudio');
+    const trackTitle = document.getElementById('trackTitle');
+    const reciterSelect = document.getElementById('reciterSelect');
+    let currentSura = '001';
+
+    function initSurahs() {
+        const container = document.getElementById('suraList');
+        container.innerHTML = '';
+        surahs.forEach(s => {
+            const btn = document.createElement('button');
+            btn.className = 'sura-btn' + (s.id === currentSura ? ' active' : '');
+            btn.innerText = s.name;
+            btn.onclick = () => playSura(s.id, s.name);
+            container.appendChild(btn);
+        });
+    }
+
+    function playSura(id, name) {
+        currentSura = id;
+        const baseUrl = reciterSelect.value;
+        audio.src = `${baseUrl}${id.padStart(3, '0')}.mp3`;
+        trackTitle.innerText = `سورة ${name}`;
+        audio.play();
+        initSurahs();
+    }
+
+    function changeReciter() {
+        playSura(currentSura, surahs.find(s => s.id === currentSura).name);
+    }
+
+    // 2. أوقات الصلاة
+    async function getPrayers() {
+        try {
+            const res = await fetch('https://api.aladhan.com/v1/timingsByCity?city=Amman&country=Jordan&method=4');
+            const data = await res.json();
+            const t = data.data.timings;
+            const list = document.getElementById('prayerTimes');
+            const map = {"Fajr":"الفجر", "Sunrise":"الشروق", "Dhuhr":"الظهر", "Asr":"العصر", "Maghrib":"المغرب", "Isha":"العشاء"};
+            
+            document.getElementById('prayerLoading').style.display = 'none';
+            list.innerHTML = '';
+            for (let k in map) {
+                list.innerHTML += `<li class="prayer-item"><span>${map[k]}</span><span>${t[k]}</span></li>`;
+            }
+        } catch (e) {
+            document.getElementById('prayerLoading').innerText = "خطأ في تحميل الأوقات";
+        }
+    }
+
+    // 3. عداد الأذكار والمسبحة
+    function countZekr(el, max) {
+        let badge = el.querySelector('.zekr-count-badge');
+        let current = parseInt(badge.innerText.split(' / ')[0]);
+        if (current < max) {
+            current++;
+            badge.innerText = `${current} / ${max}`;
+            if (current === max) el.style.opacity = '0.5';
+        }
+    }
+
+    let tCount = 0;
+    function updateTasbih() {
+        tCount++;
+        document.getElementById('tasbihNet').innerText = tCount;
+    }
+    function resetTasbih() {
+        tCount = 0;
+        document.getElementById('tasbihNet').innerText = 0;
+    }
+    
+    // 4. دالة نسخ الدعاء
+    function copyText(button) {
+        const textToCopy = button.parentElement.querySelector('p').innerText;
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            const originalText = button.innerText;
+            button.innerText = 'تم النسخ!';
+            button.style.background = '#4CAF50';
+            setTimeout(() => {
+                button.innerText = originalText;
+                button.style.background = '';
+            }, 2000);
+        }).catch(err => {
+            console.error('فشل في نسخ النص: ', err);
+        });
+    }
+
+    // تشغيل عند تحميل الصفحة
+    window.onload = () => {
+        getPrayers();
+        initSurahs();
+        // محاولة تشغيل الصوت تلقائياً
+        audio.play().catch(error => {
+            console.log("المتصفح منع التشغيل التلقائي للصوت.", error);
+        });
+    };
+</script>
+
+</body>
+</html>
